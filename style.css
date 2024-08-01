@@ -1,0 +1,370 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "League Spartan", sans-serif;
+}
+
+:root { 
+ font-size: 62.5%;
+
+/* Font size (numbers): 32px */
+
+/*THEME_1*/
+
+/*Backgrounds*/
+--Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+--Very-dark-desaturated-blue-toggle-background: hsl(223, 31%, 20%);
+--Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+
+/* Keys */
+--Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+--Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+
+--Red-key-background-toggle: hsl(6, 63%, 50%);
+--Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+--Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+--Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+/* Text */
+--Very-dark-grayish-blue: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+
+
+
+/* THEME_2 */
+
+/* Backgrounds */
+--Light-gray-main-background: hsl(0, 0%, 90%);
+--Grayish-red-toggle-background: hsl(0, 5%, 81%);
+--Very-light-gray-screen-background: hsl(0, 0%, 93%);
+
+/* Keys */
+--Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+--Very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+
+--Orange-key-background-toggle: hsl(25, 98%, 40%);
+--Dark-orange-key-shadow: hsl(25, 99%, 27%);
+
+--Light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+--Dark-grayis-orange-key-shadow: hsl(35, 11%, 61%);
+
+/* Text */
+--Ver-dark-grayish-yellow: hsl(60, 10%, 19%);
+--White-text: hsl(0, 0%, 100%);
+
+
+
+/* THEME_3 */
+
+/* Backgrounds */
+--Very-dark-violet-main-background: hsl(268, 75%, 9%);
+--Very-dark-violet-toggle-background: hsl(268, 71%, 12%);
+
+/* Keys */
+--Dark-violet-key-background: hsl(281, 89%, 26%);
+--Vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+--Pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+--Soft-cyan-key-shadow: hsl(177, 92%, 70%);
+
+--Very-dark-violet-key-background: hsl(268, 47%, 21%);
+--Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+/* Text */
+--Light-yellow: hsl(52, 100%, 62%);
+--Very-dark-blue: hsl(198, 20%, 13%);
+--White-text: hsl(0, 0%, 100%);
+
+}
+
+body {
+ background-color: var(--Very-dark-desaturated-blue-main-background);
+ transition: .3s ease-in-out;
+}
+
+main {
+ width: 40rem;
+
+ margin: auto;
+ margin-top: 10rem;
+ margin-bottom: 10rem;
+
+ display: flex;
+ flex-direction: column;
+ gap: 2rem;
+}
+
+.title {
+ width: 100%;
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+ color: var(--White);
+} 
+
+.title span {
+ font-size: 2.5rem;
+ font-weight: 600;
+
+ align-self: self-end;
+}
+
+.others {
+ font-size: 1rem;
+ font-weight: 600;
+ letter-spacing: .1rem;
+
+ display: flex;
+ flex-direction: column;
+ gap: .5rem;
+ width: 11.5rem;
+}
+
+.numbers {
+ display: flex;
+ align-items: center;
+ align-self: flex-end;
+ padding-right: .3rem;
+ gap: 1.5rem;
+
+ font-size: 1.3rem;
+ font-weight: 500;
+}
+
+.toggle {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+ width: 100%;
+}
+
+.options {
+ width: 6rem;
+ height: 2rem; 
+
+ display: flex;
+ align-items: center;
+
+ position: relative;
+
+ border-radius: 3rem;
+ transition: .3s ease-in-out;
+ background-color: var(--Very-dark-desaturated-blue-toggle-background);
+
+ padding: .2rem;
+ padding-left: .4rem;
+ padding-right: .4rem;
+}
+
+.ball {
+ height: 1.2rem;
+ width: 1.2rem;
+ border-radius: 50%;
+
+ position: absolute;
+
+ background-color: var(--Red-key-background-toggle);
+ transition: .3s ease-in-out;
+}
+
+.ball:hover {
+ cursor: pointer;
+ background-color: var(--Dark-red-key-shadow);
+}
+
+.option1, .option2, .option3 {
+ width: 2rem;
+ height: 2rem;
+}
+
+/*////////////////////////////////*/
+.display {
+ width: 100%;
+ height: 10rem;
+}
+
+#input {
+ width: 100%;
+ height: 100%;
+
+ padding: 2rem;
+ border-radius: .8rem;
+ background-color: var(--Very-dark-desaturated-blue-screen-background);
+
+ font-size: 5rem;
+ font-weight: 700;
+ color: var(--White);
+
+ outline: none;
+ border: none;
+ text-align: right;
+ transition: .3s ease-in-out;
+}
+
+/*////////////////////////////////*/
+.keyboard {
+ width: 100%;
+
+ padding: 2rem;
+ border-radius: .8rem;
+ background-color: var(--Very-dark-desaturated-blue-toggle-background);
+
+ display: grid;
+ gap: 2rem;
+ grid-template-columns: repeat(4, 1fr);
+}
+
+.keyboard button {
+ height: 5rem;
+ border: none;
+ border-radius: .8rem;
+
+ cursor: pointer;
+ border-bottom: 3.5px solid var(--Grayish-orange-key-shadow);
+
+
+ font-weight: 700;
+ font-size: 2.6rem;
+ color: var(--Very-dark-grayish-blue);
+}
+
+.keyboard button:hover {
+  background-color: var(--Grayish-red-toggle-background);
+}
+
+#del, #reset {
+ color: var(--White);
+ background-color: var(--Desaturated-dark-blue-key-shadow);
+ border-bottom: 3.5px solid var(--Very-dark-desaturated-blue-screen-background);
+}
+
+#del:hover, #reset:hover {
+ background-color: var(--Desaturated-dark-blue-key-background);
+}
+
+#result, #reset {
+ grid-column: span 2;
+ grid-row: 5
+}
+
+#result {
+ background-color: var(--Red-key-background-toggle);
+ border-bottom: 3.5px solid var(--Dark-red-key-shadow);
+ color: var(--White);
+}
+
+
+
+html.two .ball {
+ transform: translateX(165%);
+ background-color: var(--Orange-key-background-toggle);
+}
+html.two .ball:hover {
+  background-color: var(--Dark-orange-key-shadow);
+}
+
+
+html.three .ball {
+ transform: translateX(330%);
+ background-color: var(--Pure-cyan-key-background-toggle);
+}
+html.three .ball:hover {
+  background-color: var(--Soft-cyan-key-shadow);
+}
+
+
+html.two body {
+ background-color: var(--Light-gray-main-background);
+}
+html.two .title {
+color: var(--Ver-dark-grayish-yellow);
+}
+html.two .options {
+ background-color: var(--Grayish-red-toggle-background);
+}
+html.two #input {
+ color: var(--Ver-dark-grayish-yellow);
+ background-color: var(--Very-light-gray-screen-background);
+}
+html.two .keyboard button {
+ border-bottom: 3.5px solid var(--Dark-grayis-orange-key-shadow);
+ color: var(--Ver-dark-grayish-yellow);
+}
+html.two .keyboard {
+ background-color: var(--Grayish-red-toggle-background);
+}
+html.two #del{
+ color: var(--White-text);
+ background-color: var(--Dark-moderate-cyan-key-background);
+ border-bottom: 3.5px solid var(--Very-dark-cyan-key-shadow);
+} 
+html.two #reset{
+ color: var(--White-text);
+ background-color: var(--Dark-moderate-cyan-key-background);
+ border-bottom: 3.5px solid var(--Very-dark-cyan-key-shadow);
+} 
+html.two #result{
+ color: var(--White-text);
+ background-color: var(--Orange-key-background-toggle);
+ border-bottom: 3.5px solid var(--Dark-orange-key-shadow);
+} 
+html.two #del:hover, #reset:hover, .keyboard button:hover {
+ filter: brightness(110%);
+} 
+
+html.three body {
+ background-color: var(--Very-dark-violet-main-background)
+}
+html.three .title {
+color: var(--Light-yellow);
+}
+html.three .options {
+ background-color: var(--Very-dark-violet-toggle-background);
+}
+html.three #input {
+ color: var(--Light-yellow);
+ background-color: var(--Very-dark-violet-toggle-background);
+}
+html.three .keyboard button {
+ border-bottom: 3.5px solid var(--Dark-magenta-key-shadow);
+ background-color: var(--Very-dark-violet-key-background);
+ color: var(--Light-yellow);
+}
+html.three .keyboard {
+ background-color: var(--Very-dark-violet-toggle-background);
+}
+html.three #del{
+ color: var(--White-text);
+ background-color: var(--Dark-violet-key-background);
+ border-bottom: 3.5px solid var(--Vivid-magenta-key-shadow);
+} 
+html.three #reset{
+ color: var(--White-text);
+ background-color: var(--Dark-violet-key-background);
+ border-bottom: 3.5px solid var(--Vivid-magenta-key-shadow);
+}
+html.three #result{
+ color: var(--Very-dark-blue);
+ background-color: var(--Pure-cyan-key-background-toggle);
+ border-bottom: 3.5px solid var(--Soft-cyan-key-shadow);
+}
+html.three #del:hover, #reset:hover, .keyboard button:hover {
+ filter: brightness(140%);
+} 
+
+@media (max-width: 750px){
+ main {
+ width: 30rem;
+ }
+ .keyboard {
+ gap: 1rem;
+ }
+}
+
+
+
