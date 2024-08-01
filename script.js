@@ -21,7 +21,6 @@
       try {
         input.value = eval(input.value); 
       } catch {
-        input.value = 'Error';
       }
     } else {
       input.value += value;
