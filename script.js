@@ -19,6 +19,9 @@
       input.value = input.value.slice(0, -1);
     } else if (value === 'result') {
       try {
+        if (!input.value){
+          return
+        }
         input.value = eval(input.value); 
       } catch {
       }
